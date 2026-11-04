@@ -91,6 +91,7 @@ Each round is a release; the script always uses the newest one.
 | `round-46` | Three public layouts (FreePDK3 `nor`, Aureo `cap_vmam` and `scm3c_footprint`) with a terminal added by CAD-Nova, with its net, pin and pin shape (see `EDITS.txt`). Version 17 of the generator script: in `cadnova_test/pins`, one terminal and its net are deleted and another one is made. Same script (version 12). |
 | `round-47` | Four public layouts: two with a terminal deleted by CAD-Nova (one with its net), two with a pin added to an existing terminal (see `EDITS.txt`). Version 18 of the generator script: in `cadnova_test/pins`, a terminal is deleted, a net is deleted while it has a terminal, and a terminal gets one more pin. Same script (version 12). |
 | `round-48` | Two public FreePDK3 layouts with a net deleted by CAD-Nova together with its terminal and pin (see `EDITS.txt`). Version 19 of the generator script: one more small test view, `cadnova_test/font`, with labels of every printable character in three fonts, a few words, and one text in every size, justification and orientation tested. Same script (version 12). |
+| `round-49` | Two public FreePDK3 layouts with a pin added by CAD-Nova together with its label (see `EDITS.txt`). Same script (version 12) and generator (version 19). |
 
 ## Licenses
 
