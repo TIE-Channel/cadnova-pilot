@@ -81,6 +81,7 @@ Each round is a release; the script always uses the newest one.
 | `round-36` | Three public cellviews with property groups, ranges and an enum added by CAD-Nova, and one group deleted (see `EDITS.txt`). Same script (version 12) and generator (version 11). |
 | `round-37` | Four public cellviews with properties renamed, given other types, and one cellview's last property deleted by CAD-Nova (see `EDITS.txt`). Version 12 of the generator script: in its small `props` test view, one enum property is made and deleted again, and one property's type is changed. Same script (version 12). |
 | `round-38` | Three public cellviews without properties get some from CAD-Nova (among them a streamed sky130 cell), and one gets two enum properties, one deleted again (see `EDITS.txt`). Same script (version 12) and generator (version 12). |
+| `round-39` | No edits. Two more public Aureo cellviews, and the batch run also lists the properties of groups, markers and other objects of each cellview. Same script (version 12) and generator (version 12). |
 
 ## Licenses
 
