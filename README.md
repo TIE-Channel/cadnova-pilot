@@ -83,6 +83,7 @@ Each round is a release; the script always uses the newest one.
 | `round-38` | Three public cellviews without properties get some from CAD-Nova (among them a streamed sky130 cell), and one gets two enum properties, one deleted again (see `EDITS.txt`). Same script (version 12) and generator (version 12). |
 | `round-39` | No edits. Two more public Aureo cellviews, and the batch run also lists the properties of groups, markers and other objects of each cellview. Same script (version 12) and generator (version 12). |
 | `round-40` | Four public cellviews with properties added by CAD-Nova to groups, group members, routes, a marker, a schematic's block and an instance header, and one route's property deleted (see `EDITS.txt`). The batch run also lists group members' properties. Same script (version 12) and generator (version 12). |
+| `round-41` | Two public FreePDK3 layouts with pin labels deleted by CAD-Nova, and one pin label copied (see `EDITS.txt`). Same script (version 12) and generator (version 12). |
 
 ## Licenses
 
