@@ -87,6 +87,7 @@ Each round is a release; the script always uses the newest one.
 | `round-42` | No edits. Version 13 of the generator script: one more small test view, `cadnova_test/pins`, with four pins; your batch session deletes one pin's only figure, one pin, and one of another pin's two figures, then saves it. Same script (version 12). |
 | `round-43` | Three public Aureo layouts with pins deleted by CAD-Nova (their shapes stay) and pins' only shapes deleted (the pins stay); see `EDITS.txt`. Version 14 of the generator script: in `cadnova_test/pins`, pins with two and three shapes lose one, one of a terminal's three pins is deleted, and one label keeps a shape as its parent. Same script (version 12). |
 | `round-44` | Two public FreePDK3 layouts with pin shapes deleted by CAD-Nova together with their labels, and one pin label copied; one more public Aureo layout, `scumv24_footprint`, whose pins have up to 40 shapes, with one shape of two pins deleted (see `EDITS.txt`). Version 15 of the generator script: in `cadnova_test/pins`, three more labels get a parent shape, and three parent shapes are deleted. Same script (version 12). |
+| `round-45` | Three public FreePDK3 layouts: two with a pin shape deleted by CAD-Nova together with its label, one with a pin deleted whose shape keeps its label (see `EDITS.txt`). Version 16 of the generator script: in `cadnova_test/pins`, one more pin with a labelled shape is deleted, and one label whose parent is a pin shape is deleted. Same script (version 12). |
 
 ## Licenses
 
