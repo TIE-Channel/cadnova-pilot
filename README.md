@@ -84,6 +84,7 @@ Each round is a release; the script always uses the newest one.
 | `round-39` | No edits. Two more public Aureo cellviews, and the batch run also lists the properties of groups, markers and other objects of each cellview. Same script (version 12) and generator (version 12). |
 | `round-40` | Four public cellviews with properties added by CAD-Nova to groups, group members, routes, a marker, a schematic's block and an instance header, and one route's property deleted (see `EDITS.txt`). The batch run also lists group members' properties. Same script (version 12) and generator (version 12). |
 | `round-41` | Two public FreePDK3 layouts with pin labels deleted by CAD-Nova, and one pin label copied (see `EDITS.txt`). Same script (version 12) and generator (version 12). |
+| `round-42` | No edits. Version 13 of the generator script: one more small test view, `cadnova_test/pins`, with four pins; your batch session deletes one pin's only figure, one pin, and one of another pin's two figures, then saves it. Same script (version 12). |
 
 ## Licenses
 
