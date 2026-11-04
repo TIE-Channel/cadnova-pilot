@@ -89,6 +89,7 @@ Each round is a release; the script always uses the newest one.
 | `round-44` | Two public FreePDK3 layouts with pin shapes deleted by CAD-Nova together with their labels, and one pin label copied; one more public Aureo layout, `scumv24_footprint`, whose pins have up to 40 shapes, with one shape of two pins deleted (see `EDITS.txt`). Version 15 of the generator script: in `cadnova_test/pins`, three more labels get a parent shape, and three parent shapes are deleted. Same script (version 12). |
 | `round-45` | Three public FreePDK3 layouts: two with a pin shape deleted by CAD-Nova together with its label, one with a pin deleted whose shape keeps its label (see `EDITS.txt`). Version 16 of the generator script: in `cadnova_test/pins`, one more pin with a labelled shape is deleted, and one label whose parent is a pin shape is deleted. Same script (version 12). |
 | `round-46` | Three public layouts (FreePDK3 `nor`, Aureo `cap_vmam` and `scm3c_footprint`) with a terminal added by CAD-Nova, with its net, pin and pin shape (see `EDITS.txt`). Version 17 of the generator script: in `cadnova_test/pins`, one terminal and its net are deleted and another one is made. Same script (version 12). |
+| `round-47` | Four public layouts: two with a terminal deleted by CAD-Nova (one with its net), two with a pin added to an existing terminal (see `EDITS.txt`). Version 18 of the generator script: in `cadnova_test/pins`, a terminal is deleted, a net is deleted while it has a terminal, and a terminal gets one more pin. Same script (version 12). |
 
 ## Licenses
 
