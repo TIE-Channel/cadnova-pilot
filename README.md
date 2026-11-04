@@ -93,6 +93,7 @@ Each round is a release; the script always uses the newest one.
 | `round-48` | Two public FreePDK3 layouts with a net deleted by CAD-Nova together with its terminal and pin (see `EDITS.txt`). Version 19 of the generator script: one more small test view, `cadnova_test/font`, with labels of every printable character in three fonts, a few words, and one text in every size, justification and orientation tested. Same script (version 12). |
 | `round-49` | Two public FreePDK3 layouts with a pin added by CAD-Nova together with its label (see `EDITS.txt`). Same script (version 12) and generator (version 19). |
 | `round-50` | Five public layouts: labels renamed or copied by CAD-Nova with recomputed boxes (FreePDK3 `nor` and `xor_double`, sky130 `inv_1`), and rectangles added on nets (FreePDK3 `nand`, Aureo `cap_vmam`); see `EDITS.txt`. Version 20 of the generator script: in `cadnova_test/pins`, one rectangle is added to a net. Same script (version 12). |
+| `round-51` | No edits. Version 21 of the generator script: two more small test views, `cadnova_test/conn` and `cadnova_test/conndel`, with instances whose terminals your batch session connects to nets (in `conndel` it then deletes two of the connections). Same script (version 12). |
 
 ## Licenses
 
