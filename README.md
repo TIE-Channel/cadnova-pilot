@@ -78,6 +78,7 @@ Each round is a release; the script always uses the newest one.
 | `round-33` | Six public cellviews with property values changed by CAD-Nova (strings, numbers, a time, a boolean and a list value on cellviews, instances and shapes; see `EDITS.txt`). The batch run also lists every property of each kit cellview. Same script (version 12) and generator (version 11). |
 | `round-34` | Four public cellviews with PCell parameter values changed by CAD-Nova (two variants' parameters, two formal parameters; see `EDITS.txt`). Same script (version 12) and generator (version 11). |
 | `round-35` | Four public cellviews with properties added and deleted by CAD-Nova (on cellviews, instances and shapes; see `EDITS.txt`). Same script (version 12) and generator (version 11). |
+| `round-36` | Three public cellviews with property groups, ranges and an enum added by CAD-Nova, and one group deleted (see `EDITS.txt`). Same script (version 12) and generator (version 11). |
 
 ## Licenses
 
