@@ -76,6 +76,7 @@ Each round is a release; the script always uses the newest one.
 | `round-31` | Version 10 of the generator script: two more small technology libraries, `cadnova_mpp` (a multipart path template and electrical rules whose values all differ) and `cadnova_stamp` (stamp-label layers). Same script (version 12). |
 | `round-32` | Version 11 of the generator script: `cadnova_elec` (electrical rules) replaces `cadnova_mpp`, whose template your batch session cannot load; `cadnova_stamp` gets its label layers and one more entry. Same script (version 12). |
 | `round-33` | Six public cellviews with property values changed by CAD-Nova (strings, numbers, a time, a boolean and a list value on cellviews, instances and shapes; see `EDITS.txt`). The batch run also lists every property of each kit cellview. Same script (version 12) and generator (version 11). |
+| `round-34` | Four public cellviews with PCell parameter values changed by CAD-Nova (two variants' parameters, two formal parameters; see `EDITS.txt`). Same script (version 12) and generator (version 11). |
 
 ## Licenses
 
