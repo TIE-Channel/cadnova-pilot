@@ -72,6 +72,7 @@ Each round is a release; the script always uses the newest one.
 | `round-27` | Version 12 of the script: TIE's relay supplies the command that starts the batch session. The kit holds public sky130, FreePDK3, ASAP7 and Aureo cells exactly as published, and TIE's generator script, which creates four small test libraries (`cadnova_tech`, `cadnova_test`, `cadnova_vias`, `cadnova_init`) inside the round folder. Nothing outside the round folder is touched. |
 | `round-28` | As `round-27`; only a comment in the kit's `run_checks.il` changed. Same script (version 12). |
 | `round-29` | Version 8 of the generator script: four more small technology libraries inside the round folder (`cadnova_antenna`, `cadnova_antenna2`, `cadnova_antenna3`, `cadnova_density`), each built from a techfile TIE wrote, with antenna and density rules whose values all differ. Same script (version 12). |
+| `round-30` | Version 9 of the generator script: one more small technology library, `cadnova_display`, with display settings that differ per layer and a few layer properties. Same script (version 12). |
 
 ## Licenses
 
