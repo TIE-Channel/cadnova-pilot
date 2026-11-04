@@ -105,6 +105,7 @@ Each round is a release; the script always uses the newest one.
 | `round-60` | Five public layouts with polygons, lines and paths reshaped by CAD-Nova, one streamed out (see `EDITS.txt`). Version 27 of the generator script: three more small test views, `cadnova_test/acute` (paths turned into polygons), `font2` (labels in the other fonts) and `viadel` (vias deleted and added). Same script (version 12). |
 | `round-61` | Three public layouts with vias added (and some deleted again) by CAD-Nova, two with labels in other fonts, one of those streamed out (see `EDITS.txt`). Version 28 of the generator script: one more small test view, `cadnova_test/viadel2`, where your batch session deletes the only via of a kind. Same script (version 12). |
 | `round-62` | Three public layouts with bus terminals and nets (and a lone bit) added by CAD-Nova (see `EDITS.txt`). Same script (version 12) and generator (version 28). |
+| `round-63` | Two public layouts with bus terminals and nets added by CAD-Nova, one of them round 62's again with a fix (see `EDITS.txt`). Same script (version 12) and generator (version 28). |
 
 ## Licenses
 
