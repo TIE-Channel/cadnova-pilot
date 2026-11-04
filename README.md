@@ -99,6 +99,7 @@ Each round is a release; the script always uses the newest one.
 | `round-54` | As `round-53`, with a correction in one CAD-Nova file (`vertical_relay`), which stopped the batch session in `round-53`. Version 23 of the generator script corrects one step of `cadnova_test/connmid`. Same script (version 12). |
 | `round-55` | Three public Aureo layouts with instance terminals disconnected by CAD-Nova (and one connected again) whose terminals' places in the master's terminal list stay, empty or taken again (see `EDITS.txt`). Same script (version 12) and generator (version 23). |
 | `round-56` | No edits. Version 24 of the generator script: one more small test view, `cadnova_test/instdel`, where your batch session deletes two connected instances. Same script (version 12). |
+| `round-57` | Four public layouts with instances deleted by CAD-Nova (one with its connection, one the last of its master), and one instance added again (see `EDITS.txt`). Same script (version 12) and generator (version 24). |
 
 ## Licenses
 
