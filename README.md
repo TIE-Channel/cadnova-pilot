@@ -100,6 +100,7 @@ Each round is a release; the script always uses the newest one.
 | `round-55` | Three public Aureo layouts with instance terminals disconnected by CAD-Nova (and one connected again) whose terminals' places in the master's terminal list stay, empty or taken again (see `EDITS.txt`). Same script (version 12) and generator (version 23). |
 | `round-56` | No edits. Version 24 of the generator script: one more small test view, `cadnova_test/instdel`, where your batch session deletes two connected instances. Same script (version 12). |
 | `round-57` | Four public layouts with instances deleted by CAD-Nova (one with its connection, one the last of its master), and one instance added again (see `EDITS.txt`). Same script (version 12) and generator (version 24). |
+| `round-58` | Six public layouts with polygons, lines, paths, donuts, ellipses, dots and arcs added by CAD-Nova, two of them streamed out (see `EDITS.txt`). Version 25 of the generator script: one more small test view, `cadnova_test/shapes`, with round-ended paths, sharp corners, arcs and deleted shapes. Same script (version 12). |
 
 ## Licenses
 
