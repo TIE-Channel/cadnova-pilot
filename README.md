@@ -139,6 +139,7 @@ Each round is a release; the script always uses the newest one.
 | `round-90` | Two public layouts with text displays deleted by CAD-Nova: one the child of a pin figure, one with its parent figure, one with its net (see `EDITS.txt`). Version 45 of the generator script: a new library with two schematics placing a symbol (unconnected, connected). Same script (version 13). |
 | `round-91` | Two public schematics with a symbol placed by CAD-Nova, one a new master (see `EDITS.txt`). Version 46 of the generator script: two more schematics (one terminal connected; another symbol placed). Same script (version 13). |
 | `round-92` | Two public schematics with a pin added by CAD-Nova, each with its name display (see `EDITS.txt`). Same script (version 13) and generator (version 46). |
+| `round-93` | No edits. The kit's batch script also lists the layers, purposes and via definitions of nine technology libraries. Version 47 of the generator script: four more technology libraries, one with a layer and one with a purpose added by the EDA environment's functions, one with both loaded from an added techfile. Same script (version 13). |
 
 ## Licenses
 
