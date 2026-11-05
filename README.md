@@ -150,6 +150,7 @@ Each round is a release; the script always uses the newest one.
 | `round-101` | No CAD-Nova edits. Generator version 49 adds `cadnova_test/font3`: labels of the characters with codes 160 to 255 in all nine fonts, to measure them and see how they are stored. Same script (version 13). |
 | `round-102` | Labels with characters beyond ASCII written by CAD-Nova: two labels renamed (sky130 OSU `inv_1`, FreePDK3 `nand`) and one added (sky130 OSU `buf_1`), each box the drawn text's (see `EDITS.txt`). Same script (version 13) and generator (version 49). |
 | `round-103` | Layer-purpose pairs added by CAD-Nova, first in the priority order: Aureo's SOIFAB with drawing, and in sky130 a new layer and purpose with their two pairs (see `EDITS.txt`). The script lists every technology's pairs and priorities (results format 23). Generator version 49. |
+| `round-104` | Round 103's edits again; the script now lists each layer-purpose pair with its layer's name and number, priority, display packet and flags (results format 24). Generator version 49. |
 
 ## Licenses
 
