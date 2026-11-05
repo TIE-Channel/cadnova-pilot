@@ -160,6 +160,7 @@ Each round is a release; the script always uses the newest one.
 | `round-111` | No CAD-Nova edits. Generator version 54 adds `cadnova_test/viaparams`: one standard via per via parameter, each given only that parameter. |
 | `round-112` | Vias with other parameters added by CAD-Nova: enclosures, offsets, cut size and spacing in sky130 `sample` and Aureo `breakout_lyichen` (see `EDITS.txt`). Generator version 54. |
 | `round-113` | No CAD-Nova edits. Generator version 55 adds `cadnova_test/rvbase`, `rvdel`, `rvmove` and `rvadd`: routes with vias, then a route on no net that owns a via deleted, a route's segments and via moved, a via added to a route. |
+| `round-125` | Width, spacing and clearance constraints added by CAD-Nova to the foundry groups of the sky130 and Aureo technologies (see `EDITS.txt`). The script lists every constraint of the listed technologies (results format 27). Generator version 59. |
 | `round-124` | No CAD-Nova edits. Generator version 59: `cadnova_tcon`'s techfile repeats the foundry group's seven constraints and adds two (a group loaded on top replaces its constraints). |
 | `round-123` | No CAD-Nova edits. Generator version 58 adds `cadnova_tcon`: TIE's technology with two more constraints loaded into its foundry group (`cadnova_tech_con.tf`). |
 | `round-122` | Custom via definitions added by CAD-Nova to the sky130 technology, one with an existing master's names and one with new names (see `EDITS.txt`). Generator version 57. |
