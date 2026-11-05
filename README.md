@@ -144,6 +144,7 @@ Each round is a release; the script always uses the newest one.
 | `round-95` | No edits. Version 48 of the generator script: new cellviews (two empty layouts, two copies of one, an empty schematic). Same script (version 13). |
 | `round-96` | Three new cellviews made by CAD-Nova from public ones: two layouts (one with a rectangle added) and a schematic (see `EDITS.txt`; listed in `MANIFEST.txt`). Same script (version 13) and generator (version 48). |
 | `round-97` | Five new empty cellviews of three new cells, made by CAD-Nova, each from a cellview of the same library: three layouts (Aureo, FreePDK3, sky130 OSU), and a schematic and a symbol for the new FreePDK3 cell (see `EDITS.txt`; listed in `MANIFEST.txt`). Same script (version 13) and generator (version 48). |
+| `round-98` | A new library made by CAD-Nova, `cadnova_newlib` (defined in `cds.lib`; its `.oalib` and `data.dm` as FreePDK3_examples', so the same technology, which `TECHLIBS.txt` asks to list): FreePDK3 `nand`'s layout (a rectangle added), schematic and symbol, and an empty layout `blank` (see `EDITS.txt`; listed in `MANIFEST.txt`). Same script (version 13) and generator (version 48). |
 
 ## Licenses
 
