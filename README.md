@@ -140,6 +140,7 @@ Each round is a release; the script always uses the newest one.
 | `round-91` | Two public schematics with a symbol placed by CAD-Nova, one a new master (see `EDITS.txt`). Version 46 of the generator script: two more schematics (one terminal connected; another symbol placed). Same script (version 13). |
 | `round-92` | Two public schematics with a pin added by CAD-Nova, each with its name display (see `EDITS.txt`). Same script (version 13) and generator (version 46). |
 | `round-93` | No edits. The kit's batch script also lists the layers, purposes and via definitions of nine technology libraries. Version 47 of the generator script: four more technology libraries, one with a layer and one with a purpose added by the EDA environment's functions, one with both loaded from an added techfile. Same script (version 13). |
+| `round-94` | A public technology database edited by CAD-Nova: an unused layer and purpose added to the NCSU FreePDK3 technology (see `EDITS.txt`). Same script (version 13) and generator (version 47). |
 
 ## Licenses
 
