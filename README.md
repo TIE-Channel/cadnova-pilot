@@ -146,6 +146,7 @@ Each round is a release; the script always uses the newest one.
 | `round-97` | Five new empty cellviews of three new cells, made by CAD-Nova, each from a cellview of the same library: three layouts (Aureo, FreePDK3, sky130 OSU), and a schematic and a symbol for the new FreePDK3 cell (see `EDITS.txt`; listed in `MANIFEST.txt`). Same script (version 13) and generator (version 48). |
 | `round-98` | A new library made by CAD-Nova, `cadnova_newlib` (defined in `cds.lib`; its `.oalib` and `data.dm` as FreePDK3_examples', so the same technology, which `TECHLIBS.txt` asks to list): FreePDK3 `nand`'s layout (a rectangle added), schematic and symbol, and an empty layout `blank` (see `EDITS.txt`; listed in `MANIFEST.txt`). Same script (version 13) and generator (version 48). |
 | `round-99` | Instances' text displays added by CAD-Nova: an instance's name shown in FreePDK3 `d_latch` and `xor_double` (layouts) and `nand` (schematic) and in Aureo `scumv24_breakout`, each display the child of a new group its instance heads (see `EDITS.txt`). Same script (version 13) and generator (version 48). |
+| `round-100` | CAD-Nova's edits now keep the files' change stamps as the EDA environment does: rounds 99 (instances' displays) and 94 (a layer and a purpose in the NCSU technology) again, an empty Aureo layout and a rectangle in a sky130 OSU view (see `EDITS.txt`). Same script (version 13) and generator (version 48). |
 
 ## Licenses
 
