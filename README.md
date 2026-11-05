@@ -112,6 +112,7 @@ Each round is a release; the script always uses the newest one.
 | `round-67` | Two public layouts with bus terminals and nets added by CAD-Nova (see `EDITS.txt`). Version 32 of the generator script: two more copies of `aureo_lib/vertical_relay` in `cadnova_aureo`, one with a terminal and net added, one with one bus. Same script (version 12). |
 | `round-68` | Two public schematics with wires, nets and instance connections changed by CAD-Nova (see `EDITS.txt`). Same script (version 12) and generator (version 32). |
 | `round-69` | Two public schematics with pins (pin-symbol instances with terminals and nets) added by CAD-Nova (see `EDITS.txt`). Same script (version 12) and generator (version 32). |
+| `round-70` | No edits: round 69's batch session hung, so this kit leaves its schematic edits out. Same script (version 12) and generator (version 32). |
 
 ## Licenses
 
