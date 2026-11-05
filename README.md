@@ -128,6 +128,7 @@ Each round is a release; the script always uses the newest one.
 | `round-79` | No edits. Version 37 of the generator script: two more small layouts in `cadnova_test`, one with an instance of `leaf`, one with instances of three more cells added by the EDA environment's own functions. Same script (version 13). |
 | `round-80` | Three public layouts with instances of cells they did not place before, added by CAD-Nova (see `EDITS.txt`). Same script (version 13) and generator (version 37). |
 | `round-81` | No edits. Version 38 of the generator script: TIE's own small PCell `pcbox` in `cadnova_test`, and three layouts with its instances, some deleted by the EDA environment's own functions. Same script (version 13). |
+| `round-82` | One public Aureo layout with PCell instances deleted by CAD-Nova, freeing their variants (see `EDITS.txt`). Same script (version 13) and generator (version 38). |
 
 ## Licenses
 
