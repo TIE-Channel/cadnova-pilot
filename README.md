@@ -158,6 +158,7 @@ Each round is a release; the script always uses the newest one.
 | `round-109` | New via headers in freed rows: in sky130 `sample` and Aureo `breakout_lyichen` CAD-Nova deletes vias whose headers are freed, then adds vias of new parameter sets, whose headers take the freed rows (see `EDITS.txt`). Generator version 53 adds `cadnova_test/viadefbase` and `viadefnew` (a via of a second definition added). |
 | `round-110` | Vias of via definitions the views did not use: in sky130 `sample` vias of `M1M2_C` and `L1M1_C`, in Aureo `breakout_lyichen` one of `LM1xHM1`, each with its definition's row, header and parameters as CAD-Nova makes them from the technology (see `EDITS.txt`). Generator version 53. |
 | `round-111` | No CAD-Nova edits. Generator version 54 adds `cadnova_test/viaparams`: one standard via per via parameter, each given only that parameter. |
+| `round-112` | Vias with other parameters added by CAD-Nova: enclosures, offsets, cut size and spacing in sky130 `sample` and Aureo `breakout_lyichen` (see `EDITS.txt`). Generator version 54. |
 
 ## Licenses
 
