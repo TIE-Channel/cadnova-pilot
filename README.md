@@ -160,6 +160,7 @@ Each round is a release; the script always uses the newest one.
 | `round-111` | No CAD-Nova edits. Generator version 54 adds `cadnova_test/viaparams`: one standard via per via parameter, each given only that parameter. |
 | `round-112` | Vias with other parameters added by CAD-Nova: enclosures, offsets, cut size and spacing in sky130 `sample` and Aureo `breakout_lyichen` (see `EDITS.txt`). Generator version 54. |
 | `round-113` | No CAD-Nova edits. Generator version 55 adds `cadnova_test/rvbase`, `rvdel`, `rvmove` and `rvadd`: routes with vias, then a route on no net that owns a via deleted, a route's segments and via moved, a via added to a route. |
+| `round-131` | Layer function codes 35 to 44, set by CAD-Nova on ten sky130 layers without a function (see `EDITS.txt`). Results format 28. Generator version 59. |
 | `round-130` | Layer function codes 25 to 34, set by CAD-Nova on ten sky130 layers without a function (see `EDITS.txt`). Results format 28. Generator version 59. |
 | `round-129` | Layer function codes 15 to 24, set by CAD-Nova on ten sky130 layers without a function (see `EDITS.txt`). Results format 28. Generator version 59. |
 | `round-128` | Layer function codes no corpus techfile uses, set by CAD-Nova on sky130 layers without a function, and two layers' manufacturing resolutions (see `EDITS.txt`). Results format 28. Generator version 59. |
