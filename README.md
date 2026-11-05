@@ -138,6 +138,7 @@ Each round is a release; the script always uses the newest one.
 | `round-89` | Two public layouts with text displays in each format (one with an overbar, one invisible) added by CAD-Nova, and a terminal deleted with its display (see `EDITS.txt`). Version 44 of the generator script: four more layouts with text displays (in groups, of nets and instances). Same script (version 13). |
 | `round-90` | Two public layouts with text displays deleted by CAD-Nova: one the child of a pin figure, one with its parent figure, one with its net (see `EDITS.txt`). Version 45 of the generator script: a new library with two schematics placing a symbol (unconnected, connected). Same script (version 13). |
 | `round-91` | Two public schematics with a symbol placed by CAD-Nova, one a new master (see `EDITS.txt`). Version 46 of the generator script: two more schematics (one terminal connected; another symbol placed). Same script (version 13). |
+| `round-92` | Two public schematics with a pin added by CAD-Nova, each with its name display (see `EDITS.txt`). Same script (version 13) and generator (version 46). |
 
 ## Licenses
 
