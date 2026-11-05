@@ -110,6 +110,7 @@ Each round is a release; the script always uses the newest one.
 | `round-65` | No edits. Version 30 of the generator script: version 29's copy step returned nothing, so your batch session now opens `aureo_lib/vertical_relay`, saves it under two new names in `cadnova_test` (the second after adding three buses) and discards the changes to the original. Same script (version 12). |
 | `round-66` | No edits. Version 31 of the generator script: version 30's saves under new names returned nothing (the target library has another technology), so your batch session now makes a library `cadnova_aureo` bound to `aureo_lib`'s technology and copies or saves `aureo_lib/vertical_relay` there (once after adding three buses). Same script (version 12). |
 | `round-67` | Two public layouts with bus terminals and nets added by CAD-Nova (see `EDITS.txt`). Version 32 of the generator script: two more copies of `aureo_lib/vertical_relay` in `cadnova_aureo`, one with a terminal and net added, one with one bus. Same script (version 12). |
+| `round-68` | Two public schematics with wires, nets and instance connections changed by CAD-Nova (see `EDITS.txt`). Same script (version 12) and generator (version 32). |
 
 ## Licenses
 
