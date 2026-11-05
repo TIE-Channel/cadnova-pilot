@@ -153,6 +153,7 @@ Each round is a release; the script always uses the newest one.
 | `round-104` | Round 103's edits again; the script now lists each layer-purpose pair with its layer's name and number, priority, display packet and flags (results format 24). Generator version 49. |
 | `round-105` | No CAD-Nova edits. Generator version 50 adds `cadnova_test/pcdellast`: four instances of a PCell and one of `leaf` after them, then the four deleted, to see how the PCell's row is freed. |
 | `round-106` | PCells' last variants deleted by CAD-Nova: instances removed from Aureo `vertical_relay` and `dummy` so that their PCells' rows are freed with their last variants (see `EDITS.txt`). Generator version 50. |
+| `round-107` | Vias of new parameter sets added by CAD-Nova: in sky130 `sample` 3 x 2 and 2 x 2 vias of its via definition (a new header for the first, the existing one for the second), and in Aureo `breakout_lyichen` two new ones, the first deleted again so that its header and parameters are freed (see `EDITS.txt`). Generator version 51 adds `cadnova_test/viadel3`, `viadel4` and `vianet`: via headers emptied by the EDA environment in the middle of a definition's chain, a definition's last header, and vias deleted on a net and from a route. |
 
 ## Licenses
 
