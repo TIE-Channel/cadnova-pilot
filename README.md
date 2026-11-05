@@ -125,6 +125,7 @@ Each round is a release; the script always uses the newest one.
 | `round-76` | No edits. Version 35 of the generator script: four more small layouts in `cadnova_test` with path segments and routes made by the EDA environment's own functions, then some deleted or moved. Same script (version 13). |
 | `round-77` | Four public layouts with routes and path segments deleted or moved by CAD-Nova (see `EDITS.txt`). Same script (version 13) and generator (version 35). |
 | `round-78` | Four public layouts with routes and path segments added by CAD-Nova (see `EDITS.txt`). Version 36 of the generator script: two more small layouts in `cadnova_test` with routes and segments added by the EDA environment's own functions. Same script (version 13). |
+| `round-79` | No edits. Version 37 of the generator script: two more small layouts in `cadnova_test`, one with an instance of `leaf`, one with instances of three more cells added by the EDA environment's own functions. Same script (version 13). |
 
 ## Licenses
 
