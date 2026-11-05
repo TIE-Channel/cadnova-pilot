@@ -9,7 +9,7 @@ script; it checks the latest test kit and sends the report to TIE.
 
 1. Download [`cadnova_check.il`](https://github.com/TIE-Channel/cadnova-pilot/releases/latest/download/cadnova_check.il).
    It always fetches the latest test kit. Download it again only when TIE
-   announces a new version of the script itself (now version 12).
+   announces a new version of the script itself (now version 13).
 2. In your licensed EDA session, run:
    ```
    load("cadnova_check.il")
@@ -28,13 +28,17 @@ All work happens in a new folder under `~/cadnova_pilot`.
    `cds.lib`. Your session, your libraries and your `cds.lib` are never
    touched. TIE's relay supplies the command that starts the batch session;
    the script accepts only letters, digits, spaces and `_ . / + -` in it.
+   The batch session gets no input and at most 10 minutes; if it takes
+   longer, the script stops it (and kills it 30 s later if needed) and
+   reports that.
 3. TIE's generator script (`generate.il`) first creates small test libraries
    in that folder, from content TIE wrote. Then, for each test cell: opens it
    read-only and lists its shapes, instances, pins and nets; then opens it for
    edit, saves it and closes it. TIE compares that list with what CAD-Nova
    reads from the same files, and reads the files as the batch session saved
    them.
-4. Streams the sky130 test layouts out with `strmout`.
+4. Streams the sky130 test layouts out with `strmout` (each run also with
+   no input and at most 10 minutes).
 5. Packs `cadnova_report.tgz` and uploads it to TIE, also when a step
    failed, so TIE can see what went wrong. It goes to a private store and is
    never published.
@@ -113,6 +117,7 @@ Each round is a release; the script always uses the newest one.
 | `round-68` | Two public schematics with wires, nets and instance connections changed by CAD-Nova (see `EDITS.txt`). Same script (version 12) and generator (version 32). |
 | `round-69` | Two public schematics with pins (pin-symbol instances with terminals and nets) added by CAD-Nova (see `EDITS.txt`). Same script (version 12) and generator (version 32). |
 | `round-70` | No edits: round 69's batch session hung, so this kit leaves its schematic edits out. Same script (version 12) and generator (version 32). |
+| `round-71` | No edits. Script version 13: the batch session and each `strmout` run get no input and at most 10 minutes; a run that takes longer is stopped (and killed 30 s later if needed), and the report says so. Generator version 32. |
 
 ## Licenses
 
