@@ -160,6 +160,7 @@ Each round is a release; the script always uses the newest one.
 | `round-111` | No CAD-Nova edits. Generator version 54 adds `cadnova_test/viaparams`: one standard via per via parameter, each given only that parameter. |
 | `round-112` | Vias with other parameters added by CAD-Nova: enclosures, offsets, cut size and spacing in sky130 `sample` and Aureo `breakout_lyichen` (see `EDITS.txt`). Generator version 54. |
 | `round-113` | No CAD-Nova edits. Generator version 55 adds `cadnova_test/rvbase`, `rvdel`, `rvmove` and `rvadd`: routes with vias, then a route on no net that owns a via deleted, a route's segments and via moved, a via added to a route. |
+| `round-122` | Custom via definitions added by CAD-Nova to the sky130 technology, one with an existing master's names and one with new names (see `EDITS.txt`). Generator version 57. |
 | `round-121` | No CAD-Nova edits. Generator version 57 adds `cadnova_tcvia`: TIE's technology with two more custom via definitions loaded on top (`cadnova_tech_cvia.tf`). |
 | `round-120` | Standard via definitions added by CAD-Nova to the sky130 and Aureo technologies (see `EDITS.txt`). The script lists each technology via definition's parameters (results format 26). Generator version 56. |
 | `round-119` | No CAD-Nova edits. Generator version 56 adds `cadnova_tvia`: TIE's technology with one more standard via definition loaded on top (`cadnova_tech_via.tf`). |
