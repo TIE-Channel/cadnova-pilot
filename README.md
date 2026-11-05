@@ -160,6 +160,7 @@ Each round is a release; the script always uses the newest one.
 | `round-111` | No CAD-Nova edits. Generator version 54 adds `cadnova_test/viaparams`: one standard via per via parameter, each given only that parameter. |
 | `round-112` | Vias with other parameters added by CAD-Nova: enclosures, offsets, cut size and spacing in sky130 `sample` and Aureo `breakout_lyichen` (see `EDITS.txt`). Generator version 54. |
 | `round-113` | No CAD-Nova edits. Generator version 55 adds `cadnova_test/rvbase`, `rvdel`, `rvmove` and `rvadd`: routes with vias, then a route on no net that owns a via deleted, a route's segments and via moved, a via added to a route. |
+| `round-118` | A bus added by CAD-Nova in Aureo `vertical_relay`, its net index extended to the new nets as the EDA environment does (see `EDITS.txt`). Generator version 55. |
 | `round-117` | Path segments with custom ends added by CAD-Nova in Aureo `scumv24_breakout` (diagonal ones, symmetric and asymmetric, and an orthogonal one) and sky130 `sample` (see `EDITS.txt`). Generator version 55. |
 | `round-116` | No CAD-Nova edits. The script lists the drawn outline of every path segment with a custom end (results format 25). Generator version 55. |
 | `round-115` | Diagonal path segments added by CAD-Nova in Aureo `scumv24_breakout` (in a new route, and on its own with variable ends) and `BreakoutBoardBootingLoop` (in an existing route) (see `EDITS.txt`). Generator version 55. |
