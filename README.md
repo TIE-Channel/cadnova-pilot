@@ -160,6 +160,7 @@ Each round is a release; the script always uses the newest one.
 | `round-111` | No CAD-Nova edits. Generator version 54 adds `cadnova_test/viaparams`: one standard via per via parameter, each given only that parameter. |
 | `round-112` | Vias with other parameters added by CAD-Nova: enclosures, offsets, cut size and spacing in sky130 `sample` and Aureo `breakout_lyichen` (see `EDITS.txt`). Generator version 54. |
 | `round-113` | No CAD-Nova edits. Generator version 55 adds `cadnova_test/rvbase`, `rvdel`, `rvmove` and `rvadd`: routes with vias, then a route on no net that owns a via deleted, a route's segments and via moved, a via added to a route. |
+| `round-128` | Layer function codes no corpus techfile uses, set by CAD-Nova on sky130 layers without a function, and two layers' manufacturing resolutions (see `EDITS.txt`). Results format 28. Generator version 59. |
 | `round-127` | Layer functions and mask numbers set by CAD-Nova in the sky130, FreePDK3 and Aureo technologies (see `EDITS.txt`). The script lists each layer's function, mask number and manufacturing resolution (results format 28). Generator version 59. |
 | `round-126` | Round 125's sky130 constraints alone (its Aureo ones ended the batch session; see `EDITS.txt`). Results format 27. Generator version 59. |
 | `round-125` | Width, spacing and clearance constraints added by CAD-Nova to the foundry groups of the sky130 and Aureo technologies (see `EDITS.txt`). The script lists every constraint of the listed technologies (results format 27). Generator version 59. |
