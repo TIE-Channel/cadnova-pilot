@@ -134,6 +134,7 @@ Each round is a release; the script always uses the newest one.
 | `round-85` | Three public layouts with mosaics deleted (and some added) by CAD-Nova (see `EDITS.txt`). Same script (version 13) and generator (version 40). |
 | `round-86` | No edits. The kit's batch script also lists each text display's owner, height, font, justification and orientation. Version 41 of the generator script: one more layout with text displays made by the EDA environment's own functions. Same script (version 13). |
 | `round-87` | Four public views with text displays added, moved, restyled or deleted by CAD-Nova (see `EDITS.txt`). The kit's batch script also lists every attribute of the displays in one generated view. Version 42 of the generator script: five more layouts with text displays. Same script (version 13). |
+| `round-88` | No edits. Version 43 of the generator script (version 42 did not load): the five layouts with text displays of round 87. Same script (version 13). |
 
 ## Licenses
 
