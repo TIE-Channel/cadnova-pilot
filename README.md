@@ -143,6 +143,7 @@ Each round is a release; the script always uses the newest one.
 | `round-94` | A public technology database edited by CAD-Nova: an unused layer and purpose added to the NCSU FreePDK3 technology (see `EDITS.txt`). Same script (version 13) and generator (version 47). |
 | `round-95` | No edits. Version 48 of the generator script: new cellviews (two empty layouts, two copies of one, an empty schematic). Same script (version 13). |
 | `round-96` | Three new cellviews made by CAD-Nova from public ones: two layouts (one with a rectangle added) and a schematic (see `EDITS.txt`; listed in `MANIFEST.txt`). Same script (version 13) and generator (version 48). |
+| `round-97` | Five new empty cellviews of three new cells, made by CAD-Nova, each from a cellview of the same library: three layouts (Aureo, FreePDK3, sky130 OSU), and a schematic and a symbol for the new FreePDK3 cell (see `EDITS.txt`; listed in `MANIFEST.txt`). Same script (version 13) and generator (version 48). |
 
 ## Licenses
 
