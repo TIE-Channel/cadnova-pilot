@@ -119,6 +119,7 @@ Each round is a release; the script always uses the newest one.
 | `round-70` | No edits: round 69's batch session hung, so this kit leaves its schematic edits out. Same script (version 12) and generator (version 32). |
 | `round-71` | No edits. Script version 13: the batch session and each `strmout` run get no input and at most 10 minutes; a run that takes longer is stopped (and killed 30 s later if needed), and the report says so. Generator version 32. |
 | `round-72` | Round 69's two schematics with pins added by CAD-Nova, again (see `EDITS.txt`), now with script version 13's time limit; the kit's batch script writes each result line out at once. Same script (version 13) and generator (version 32). |
+| `round-73` | No edits. Version 33 of the generator script: your batch session saves copies of the kit's FreePDK3 `nand` and `d_latch` schematics in a new library `cadnova_sch` inside the round folder, as they are and after adding pins with the EDA environment's own functions. Same script (version 13). |
 
 ## Licenses
 
