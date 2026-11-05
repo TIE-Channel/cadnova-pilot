@@ -1,4 +1,4 @@
-;; CAD-Nova pilot check (partner side), harness version 12
+;; CAD-Nova pilot check (partner side), harness version 13
 ;;
 ;; Load it in your licensed EDA session:   load("cadnova_check.il")
 ;;
@@ -20,6 +20,9 @@
 ;;      Kits with TIE's generator script (generate.il) first create small test
 ;;      libraries inside the round folder (GENERATED.txt names them).
 ;;   4. Streams the test layouts out with strmout.
+;;      The batch session and each strmout run get no input (/dev/null) and at
+;;      most 10 minutes; one that runs longer is stopped (killed 30 s later if
+;;      it does not end), and the report says so (harness 13).
 ;;   5. Packs a report and uploads it to TIE (privately; never published),
 ;;      also when a step failed, so that TIE sees what went wrong.
 ;;
@@ -40,8 +43,9 @@
 CadNovaConfig = list(nil
     'kitBase   "https://github.com/TIE-Channel/cadnova-pilot/releases/latest/download"
     'uploadUrl "https://script.google.com/macros/s/AKfycbwkFP_Wj65QmwiPEB3c1d0FYVE89Epm4GBYaKcMKKl-yUGgo5Jsm_12cPusah87htu3vg/exec"     ; empty: the report stays on your machine
-    'harness   "12"
+    'harness   "13"
     'pollTenths 600                ; ask the relay for run requests every 60 s
+    'limitSeconds 600              ; most time for the batch session and each strmout run
     ;; Prefix for system tools started from the EDA session: its library path
     ;; can hold its own SSL libraries, which break the system curl and wget.
     'cleanEnv  "env -u LD_LIBRARY_PATH -u LD_PRELOAD"
@@ -50,6 +54,14 @@ CadNovaConfig = list(nil
 procedure(CadNovaShell(cmd)
     printf("cadnova: %s\n" cmd)
     sh(cmd))
+
+;; cmd as a shell command with no input that runs at most limitSeconds seconds:
+;; then timeout stops it and its child processes, and kills them 30 s later if
+;; they are still there; it exits with status 124 (or 137). Without timeout on
+;; the system, cmd runs without a limit. Output redirections go after it.
+procedure(CadNovaLimited(cmd)
+    sprintf(nil "if command -v timeout > /dev/null 2>&1; then timeout -k 30 %d %s; else %s; fi < /dev/null"
+            CadNovaConfig->limitSeconds cmd cmd))
 
 ;; Prints the first lines of a file (tool error messages) into this session's output.
 procedure(CadNovaShowFile(path)
@@ -192,8 +204,13 @@ procedure(CadNovaCheck()
         command = CadNovaBatchCommand()
         if(command
         then
-            printf("cadnova: running the checks in a batch session; this takes a few minutes.\n")
-            CadNovaShell(sprintf(nil "cd '%s' && %s > batch.stdout 2>&1" kitDir command))
+            printf("cadnova: running the checks in a batch session; this takes a few minutes (at most %d).\n"
+                   CadNovaConfig->limitSeconds / 60)
+            CadNovaShell(sprintf(nil "cd '%s' && %s > batch.stdout 2>&1; s=$?; if [ $s -eq 124 ] || [ $s -eq 137 ]; then echo 'error: the batch session was stopped after %d minutes (time limit)' | tee -a batch.stdout > batch.limit; if [ -f results.txt ]; then echo 'aborted the batch session was stopped after %d minutes (time limit)' >> results.txt; fi; fi"
+                                 kitDir CadNovaLimited(command) CadNovaConfig->limitSeconds / 60 CadNovaConfig->limitSeconds / 60))
+            when(isFile(strcat(kitDir "/batch.limit"))
+                printf("cadnova: the batch session took longer than %d minutes and was stopped.\n"
+                       CadNovaConfig->limitSeconds / 60))
         else
             printf("cadnova: the relay sent no batch command, so the checks cannot run.\n")
             CadNovaShell(sprintf(nil "echo 'error: the relay sent no batch command' > '%s/batch.stdout'" kitDir)))
@@ -210,8 +227,11 @@ procedure(CadNovaCheck()
                     lib = nth(0 parts)
                     cell = nth(1 parts)
                     view = nth(2 parts)
-                    CadNovaShell(sprintf(nil "cd '%s' && strmout -library %s -strmFile out/%s.gds -topCell %s -view %s -layerMap %s -logFile out/%s.strmout.log > out/%s.strmout.stdout 2>&1"
-                                         kitDir lib cell cell view nth(3 parts) cell cell))
+                    CadNovaShell(sprintf(nil "cd '%s' && %s > out/%s.strmout.stdout 2>&1"
+                                         kitDir
+                                         CadNovaLimited(sprintf(nil "strmout -library %s -strmFile out/%s.gds -topCell %s -view %s -layerMap %s -logFile out/%s.strmout.log"
+                                                                lib cell cell view nth(3 parts) cell))
+                                         cell))
                     unless(isFile(sprintf(nil "%s/out/%s.gds" kitDir cell))
                         printf("cadnova: strmout produced no GDS for %s/%s/%s\n" lib cell view))))
             when(port close(port)))
@@ -258,7 +278,8 @@ procedure(CadNovaCheck()
         fprintf(meta "harness %s\nkit %s\n" CadNovaConfig->harness sha)
         close(meta)
         CadNovaShell(sprintf(nil "cd '%s' && date -u +%%Y-%%m-%%dT%%H:%%M:%%SZ >> meta.txt" kitDir))
-        CadNovaShell(sprintf(nil "cd '%s' && (grep -E '\\*(WARNING|Error)\\*' batch.log; grep -hiE 'error|warning' batch.stdout out/*.strmout.log out/*.strmout.stdout) 2>/dev/null | sed 's#%s#<work>#g; s#%s#<home>#g' | head -n 500 > warnings.txt"
+        ;; At most 500 lines from each log, 500 in all (harness 13).
+        CadNovaShell(sprintf(nil "cd '%s' && (grep -m 500 -E '\\*(WARNING|Error)\\*' batch.log; grep -m 500 -hiE 'error|warning' batch.stdout out/*.strmout.log out/*.strmout.stdout) 2>/dev/null | head -n 500 | sed 's#%s#<work>#g; s#%s#<home>#g' > warnings.txt"
                              kitDir work getShellEnvVar("HOME")))
         report = strcat(work "/cadnova_report.tgz")
         unless(CadNovaShell(sprintf(nil "cd '%s' && %s tar -czf '%s' meta.txt warnings.txt $(ls results.txt saved.txt out/*.gds 2>/dev/null) %s"
@@ -304,7 +325,8 @@ procedure(CadNovaFirstLine(path)
             and(line car(parseString(line "\n"))))))
 
 ;; The whole command that starts the batch session in the kit folder, with
-;; run_checks.il and the batch.log log file (harness 12). The relay holds it in
+;; run_checks.il and the batch.log log file (harness 12; CadNovaLimited wraps
+;; it since harness 13). The relay holds it in
 ;; its BATCH_COMMAND property and answers "command <the command>". Only
 ;; letters, digits, spaces and _ . / + - are accepted, so it cannot carry other
 ;; shell commands. nil without an answer.
