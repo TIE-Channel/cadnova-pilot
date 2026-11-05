@@ -132,6 +132,7 @@ Each round is a release; the script always uses the newest one.
 | `round-83` | No edits. Version 39 of the generator script: four more small layouts in `cadnova_test` with mosaics made, changed and deleted by the EDA environment's own functions. Same script (version 13). |
 | `round-84` | Four public layouts with mosaics changed or added by CAD-Nova (see `EDITS.txt`); two more public Aureo layouts in the kit. The kit's batch script also lists each mosaic's rows, columns and spacing. Version 40 of the generator script: one more layout with a mosaic deleted. Same script (version 13). |
 | `round-85` | Three public layouts with mosaics deleted (and some added) by CAD-Nova (see `EDITS.txt`). Same script (version 13) and generator (version 40). |
+| `round-86` | No edits. The kit's batch script also lists each text display's owner, height, font, justification and orientation. Version 41 of the generator script: one more layout with text displays made by the EDA environment's own functions. Same script (version 13). |
 
 ## Licenses
 
