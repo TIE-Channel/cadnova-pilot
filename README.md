@@ -152,6 +152,7 @@ Each round is a release; the script always uses the newest one.
 | `round-103` | Layer-purpose pairs added by CAD-Nova, first in the priority order: Aureo's SOIFAB with drawing, and in sky130 a new layer and purpose with their two pairs (see `EDITS.txt`). The script lists every technology's pairs and priorities (results format 23). Generator version 49. |
 | `round-104` | Round 103's edits again; the script now lists each layer-purpose pair with its layer's name and number, priority, display packet and flags (results format 24). Generator version 49. |
 | `round-105` | No CAD-Nova edits. Generator version 50 adds `cadnova_test/pcdellast`: four instances of a PCell and one of `leaf` after them, then the four deleted, to see how the PCell's row is freed. |
+| `round-106` | PCells' last variants deleted by CAD-Nova: instances removed from Aureo `vertical_relay` and `dummy` so that their PCells' rows are freed with their last variants (see `EDITS.txt`). Generator version 50. |
 
 ## Licenses
 
