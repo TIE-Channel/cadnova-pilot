@@ -123,6 +123,7 @@ Each round is a release; the script always uses the newest one.
 | `round-74` | Round 69's two schematics with pins added by CAD-Nova, written as your EDA environment wrote its own pins in round 73 (see `EDITS.txt`). Same script (version 13) and generator (version 33). |
 | `round-75` | Round 69's two schematics with pins added by CAD-Nova, now also with a layout detail fixed that kept round 74's `d_latch` from opening (see `EDITS.txt`). Version 34 of the generator script: the copies in `cadnova_sch` are no longer made. Same script (version 13). |
 | `round-76` | No edits. Version 35 of the generator script: four more small layouts in `cadnova_test` with path segments and routes made by the EDA environment's own functions, then some deleted or moved. Same script (version 13). |
+| `round-77` | Four public layouts with routes and path segments deleted or moved by CAD-Nova (see `EDITS.txt`). Same script (version 13) and generator (version 35). |
 
 ## Licenses
 
