@@ -142,6 +142,7 @@ Each round is a release; the script always uses the newest one.
 | `round-93` | No edits. The kit's batch script also lists the layers, purposes and via definitions of nine technology libraries. Version 47 of the generator script: four more technology libraries, one with a layer and one with a purpose added by the EDA environment's functions, one with both loaded from an added techfile. Same script (version 13). |
 | `round-94` | A public technology database edited by CAD-Nova: an unused layer and purpose added to the NCSU FreePDK3 technology (see `EDITS.txt`). Same script (version 13) and generator (version 47). |
 | `round-95` | No edits. Version 48 of the generator script: new cellviews (two empty layouts, two copies of one, an empty schematic). Same script (version 13). |
+| `round-96` | Three new cellviews made by CAD-Nova from public ones: two layouts (one with a rectangle added) and a schematic (see `EDITS.txt`; listed in `MANIFEST.txt`). Same script (version 13) and generator (version 48). |
 
 ## Licenses
 
