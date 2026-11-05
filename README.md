@@ -148,6 +148,7 @@ Each round is a release; the script always uses the newest one.
 | `round-99` | Instances' text displays added by CAD-Nova: an instance's name shown in FreePDK3 `d_latch` and `xor_double` (layouts) and `nand` (schematic) and in Aureo `scumv24_breakout`, each display the child of a new group its instance heads (see `EDITS.txt`). Same script (version 13) and generator (version 48). |
 | `round-100` | CAD-Nova's edits now keep the files' change stamps as the EDA environment does: rounds 99 (instances' displays) and 94 (a layer and a purpose in the NCSU technology) again, an empty Aureo layout and a rectangle in a sky130 OSU view (see `EDITS.txt`). Same script (version 13) and generator (version 48). |
 | `round-101` | No CAD-Nova edits. Generator version 49 adds `cadnova_test/font3`: labels of the characters with codes 160 to 255 in all nine fonts, to measure them and see how they are stored. Same script (version 13). |
+| `round-102` | Labels with characters beyond ASCII written by CAD-Nova: two labels renamed (sky130 OSU `inv_1`, FreePDK3 `nand`) and one added (sky130 OSU `buf_1`), each box the drawn text's (see `EDITS.txt`). Same script (version 13) and generator (version 49). |
 
 ## Licenses
 
