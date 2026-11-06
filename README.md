@@ -160,6 +160,7 @@ Each round is a release; the script always uses the newest one.
 | `round-111` | No CAD-Nova edits. Generator version 54 adds `cadnova_test/viaparams`: one standard via per via parameter, each given only that parameter. |
 | `round-112` | Vias with other parameters added by CAD-Nova: enclosures, offsets, cut size and spacing in sky130 `sample` and Aureo `breakout_lyichen` (see `EDITS.txt`). Generator version 54. |
 | `round-113` | No CAD-Nova edits. Generator version 55 adds `cadnova_test/rvbase`, `rvdel`, `rvmove` and `rvadd`: routes with vias, then a route on no net that owns a via deleted, a route's segments and via moved, a via added to a route. |
+| `round-156` | First terminals added by CAD-Nova to Aureo views that have no terminal table: the bus `CNB<3:0>` in `breakout_lyichen`, the terminal `CNT` with a pin in `scumv24_breakout`. Generator version 72. |
 | `round-155` | No edits: generator version 72 adds `blbase`, `blterm`, `blbus` and `blpin` (copies of Aureo `breakout_lyichen`, which has no terminal table, given a first terminal by the EDA environment). |
 | `round-154` | Buses added by CAD-Nova to Aureo `scm3c_footprint` and `scumv24_footprint`, whose net index is in the sparse form. Generator version 71. |
 | `round-153` | No edits: generator version 71 adds `rends` and `acute2` (round ends and acute joins at many angles and widths, with the EDA environment's polygons). |
