@@ -160,6 +160,7 @@ Each round is a release; the script always uses the newest one.
 | `round-111` | No CAD-Nova edits. Generator version 54 adds `cadnova_test/viaparams`: one standard via per via parameter, each given only that parameter. |
 | `round-112` | Vias with other parameters added by CAD-Nova: enclosures, offsets, cut size and spacing in sky130 `sample` and Aureo `breakout_lyichen` (see `EDITS.txt`). Generator version 54. |
 | `round-113` | No CAD-Nova edits. Generator version 55 adds `cadnova_test/rvbase`, `rvdel`, `rvmove` and `rvadd`: routes with vias, then a route on no net that owns a via deleted, a route's segments and via moved, a via added to a route. |
+| `round-161` | Aureo `mems_demo_tf`'s technology (new in the kit, listed): the constraint group `cnUser`, with the user-defined group type it lacked. Generator version 76. |
 | `round-160` | No edits: round 159 again with a smaller report (generator version 76 retires probes whose findings are recorded); `cadnova_tset1`–`3`. |
 | `round-159` | No edits: generator version 75 compiles `cadnova_tset1`–`4`, spacing tables whose index gives values where public techfiles give `nil nil`. |
 | `round-158` | sky130 `buf_1`: nine round-ended paths at angles other than multiples of 45 degrees, half widths multiples of 3. Generator version 74 adds `rends3`. |
