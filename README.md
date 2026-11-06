@@ -160,6 +160,7 @@ Each round is a release; the script always uses the newest one.
 | `round-111` | No CAD-Nova edits. Generator version 54 adds `cadnova_test/viaparams`: one standard via per via parameter, each given only that parameter. |
 | `round-112` | Vias with other parameters added by CAD-Nova: enclosures, offsets, cut size and spacing in sky130 `sample` and Aureo `breakout_lyichen` (see `EDITS.txt`). Generator version 54. |
 | `round-113` | No CAD-Nova edits. Generator version 55 adds `cadnova_test/rvbase`, `rvdel`, `rvmove` and `rvadd`: routes with vias, then a route on no net that owns a via deleted, a route's segments and via moved, a via added to a route. |
+| `round-171` | Three layer-purpose pairs added to NCSU's (FreePDK3's) technology, whose pair table is in the older form. |
 | `round-170` | Three derived layers added to ASAP7's technology in its own form (operands in the layer-reference table). |
 | `round-169` | Antenna rules added: sky130 `poly`; Aureo `POLY1` (two models) and a `cumulativeMetalAntenna`. |
 | `round-168` | Purpose lists (`validPurposes`) added to the foundry groups of Aureo's and sky130's technologies. |
