@@ -160,6 +160,7 @@ Each round is a release; the script always uses the newest one.
 | `round-111` | No CAD-Nova edits. Generator version 54 adds `cadnova_test/viaparams`: one standard via per via parameter, each given only that parameter. |
 | `round-112` | Vias with other parameters added by CAD-Nova: enclosures, offsets, cut size and spacing in sky130 `sample` and Aureo `breakout_lyichen` (see `EDITS.txt`). Generator version 54. |
 | `round-113` | No CAD-Nova edits. Generator version 55 adds `cadnova_test/rvbase`, `rvdel`, `rvmove` and `rvadd`: routes with vias, then a route on no net that owns a via deleted, a route's segments and via moved, a via added to a route. |
+| `round-145` | No CAD-Nova edits. Generator version 67 adds `cadnova_test/cvbase`, `cvnew` and `cvtwo`: a standard via, then the view's first custom via, then a second one. Results format 29. |
 | `round-144` | A new sky130 group with a density, a maximum width and a cut-count table, whose definitions sky130 lacks, added by CAD-Nova (see `EDITS.txt`). Results format 29. Generator version 66. |
 | `round-143` | A new constraint group in sky130 with a layer list, a via list and spacing tables over one and two indexes, added by CAD-Nova (see `EDITS.txt`). Results format 29. Generator version 66. |
 | `round-142` | No CAD-Nova edits. Generator version 66 adds `cadnova_tkind`: a group with layer and via lists, a float, an area and two spacing tables loaded on top of TIE's technology. Results format 29. |
