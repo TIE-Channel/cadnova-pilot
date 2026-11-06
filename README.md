@@ -160,6 +160,7 @@ Each round is a release; the script always uses the newest one.
 | `round-111` | No CAD-Nova edits. Generator version 54 adds `cadnova_test/viaparams`: one standard via per via parameter, each given only that parameter. |
 | `round-112` | Vias with other parameters added by CAD-Nova: enclosures, offsets, cut size and spacing in sky130 `sample` and Aureo `breakout_lyichen` (see `EDITS.txt`). Generator version 54. |
 | `round-113` | No CAD-Nova edits. Generator version 55 adds `cadnova_test/rvbase`, `rvdel`, `rvmove` and `rvadd`: routes with vias, then a route on no net that owns a via deleted, a route's segments and via moved, a via added to a route. |
+| `round-167` | Density tables (`minDensity`, `maxDensity` over `step`) added to ASAP7's and sky130's technologies; generator version 79 retires `cadnova_tnoc0` and `cadnova_tnoc1`. |
 | `round-166` | Three constraints in Aureo's `mems_demo_tf`, whose technology has no constraint tables: the four tables made first, as the EDA environment makes them. |
 | `round-165` | No edits: generator version 78 compiles `cadnova_tnoc0` (a technology without constraints) and `cadnova_tnoc1` (the same with three constraints loaded on top); `cadnova_tsub` retired. |
 | `round-164` | Aureo's `SOI1` (function substrate) made `li`, mask 1: its per-layer records removed first. |
