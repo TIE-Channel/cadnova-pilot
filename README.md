@@ -160,6 +160,7 @@ Each round is a release; the script always uses the newest one.
 | `round-111` | No CAD-Nova edits. Generator version 54 adds `cadnova_test/viaparams`: one standard via per via parameter, each given only that parameter. |
 | `round-112` | Vias with other parameters added by CAD-Nova: enclosures, offsets, cut size and spacing in sky130 `sample` and Aureo `breakout_lyichen` (see `EDITS.txt`). Generator version 54. |
 | `round-113` | No CAD-Nova edits. Generator version 55 adds `cadnova_test/rvbase`, `rvdel`, `rvmove` and `rvadd`: routes with vias, then a route on no net that owns a via deleted, a route's segments and via moved, a via added to a route. |
+| `round-151` | sky130 `sample`: a `PYL1_C` via, then one with another second-implant enclosure and one with a wider first layer, added by CAD-Nova (see `EDITS.txt`). Results format 29. Generator version 70. |
 | `round-150` | No CAD-Nova edits. Generator version 70 tries other names for the implant enclosures in `cadnova_sky/cnimp`. Results format 29. |
 | `round-149` | No CAD-Nova edits. Generator version 69 prints a via's attributes in `cadnova_sky/cnimp` and gives its implant parameters by their own names. Results format 29. |
 | `round-148` | A via of sky130's `PYL1_C` (a definition with an implant) and a copy in R90, added by CAD-Nova to sky130 `sample` (see `EDITS.txt`). Results format 29. Generator version 68. |
