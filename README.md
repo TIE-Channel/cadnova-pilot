@@ -160,6 +160,7 @@ Each round is a release; the script always uses the newest one.
 | `round-111` | No CAD-Nova edits. Generator version 54 adds `cadnova_test/viaparams`: one standard via per via parameter, each given only that parameter. |
 | `round-112` | Vias with other parameters added by CAD-Nova: enclosures, offsets, cut size and spacing in sky130 `sample` and Aureo `breakout_lyichen` (see `EDITS.txt`). Generator version 54. |
 | `round-113` | No CAD-Nova edits. Generator version 55 adds `cadnova_test/rvbase`, `rvdel`, `rvmove` and `rvadd`: routes with vias, then a route on no net that owns a via deleted, a route's segments and via moved, a via added to a route. |
+| `round-164` | Aureo's `SOI1` (function substrate) made `li`, mask 1: its per-layer records removed first. |
 | `round-163` | No edits: generator version 77 compiles `cadnova_tsub` (two layers of function substrate). |
 | `round-162` | Round 161's edit again; the script lists every constraint group with its type (results format 31). |
 | `round-161` | Aureo `mems_demo_tf`'s technology (new in the kit, listed): the constraint group `cnUser`, with the user-defined group type it lacked. Generator version 76. |
