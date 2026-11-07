@@ -160,6 +160,7 @@ Each round is a release; the script always uses the newest one.
 | `round-111` | No CAD-Nova edits. Generator version 54 adds `cadnova_test/viaparams`: one standard via per via parameter, each given only that parameter. |
 | `round-112` | Vias with other parameters added by CAD-Nova: enclosures, offsets, cut size and spacing in sky130 `sample` and Aureo `breakout_lyichen` (see `EDITS.txt`). Generator version 54. |
 | `round-113` | No CAD-Nova edits. Generator version 55 adds `cadnova_test/rvbase`, `rvdel`, `rvmove` and `rvadd`: routes with vias, then a route on no net that owns a via deleted, a route's segments and via moved, a via added to a route. |
+| `round-174` | One constraint of each of eleven definitions new to CAD-Nova's catalog added to sky130's technology. |
 | `round-173` | No edits: generator version 80 compiles `cadnova_tdefs` (sixteen constraint definitions CAD-Nova's catalog lacks, each loaded alone). |
 | `round-172` | Three wires in FreePDK3's `d_latch` schematic, with the clean-up the EDA environment's save does where wires meet (splits, junction dots). |
 | `round-171` | Three layer-purpose pairs added to NCSU's (FreePDK3's) technology, whose pair table is in the older form. |
