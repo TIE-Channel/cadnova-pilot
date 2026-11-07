@@ -160,6 +160,7 @@ Each round is a release; the script always uses the newest one.
 | `round-111` | No CAD-Nova edits. Generator version 54 adds `cadnova_test/viaparams`: one standard via per via parameter, each given only that parameter. |
 | `round-112` | Vias with other parameters added by CAD-Nova: enclosures, offsets, cut size and spacing in sky130 `sample` and Aureo `breakout_lyichen` (see `EDITS.txt`). Generator version 54. |
 | `round-113` | No CAD-Nova edits. Generator version 55 adds `cadnova_test/rvbase`, `rvdel`, `rvmove` and `rvadd`: routes with vias, then a route on no net that owns a via deleted, a route's segments and via moved, a via added to a route. |
+| `round-190` | Constraints of 19 definitions round 189's probe gave CAD-Nova's catalog added to sky130's technology. Generator version 87 adds false and true booleans to `cadnova_tdefs3`. |
 | `round-189` | No CAD-Nova edits. Generator version 86 adds `cadnova_tdefs3`: TIE's technology with a constraint of each of many public constraint names CAD-Nova's catalog lacks, made by the EDA environment's own constraint function where it knows the name. |
 | `round-188` | Constraints of five definitions new to CAD-Nova's catalog (from OSU's toy SRAM technology: `layerThickness`, `resistance`, the two LEF capacitances, `maxACCurrentDensity`) added to sky130's technology. Generator version 85 lists the EDA environment's constraint-related functions. |
 | `round-187` | No CAD-Nova edits: OSU's toy SRAM technology (LEF-derived, its own `tech.db`) listed in full. Generator version 84. |
