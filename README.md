@@ -160,6 +160,7 @@ Each round is a release; the script always uses the newest one.
 | `round-111` | No CAD-Nova edits. Generator version 54 adds `cadnova_test/viaparams`: one standard via per via parameter, each given only that parameter. |
 | `round-112` | Vias with other parameters added by CAD-Nova: enclosures, offsets, cut size and spacing in sky130 `sample` and Aureo `breakout_lyichen` (see `EDITS.txt`). Generator version 54. |
 | `round-113` | No CAD-Nova edits. Generator version 55 adds `cadnova_test/rvbase`, `rvdel`, `rvmove` and `rvadd`: routes with vias, then a route on no net that owns a via deleted, a route's segments and via moved, a via added to a route. |
+| `round-199` | Round 198's acute-joined paths again. Generator version 93 replaces `acute5` with `acute6`: five acute-join shapes whose legs are more than 53 degrees apart, at 61 widths, with the EDA environment's polygons. |
 | `round-198` | Round 197's 13 acute-joined paths in sky130 `buf_1` again, with three of variable extensions; CAD-Nova's export writes paths with acute joins as the stream-out's boundaries. |
 | `round-197` | 13 acute-joined paths added by CAD-Nova to sky130 `buf_1` (legs 23.7 to 45 degrees apart, every orientation), their boxes by CAD-Nova's new acute-join rule. Generator version 92. |
 | `round-196` | No CAD-Nova edits. Generator version 92 replaces `acute4` and `rends4` with `acute5`: acute joins of five more shapes at 61 widths, with the EDA environment's polygons. |
