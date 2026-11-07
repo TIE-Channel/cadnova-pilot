@@ -160,6 +160,7 @@ Each round is a release; the script always uses the newest one.
 | `round-111` | No CAD-Nova edits. Generator version 54 adds `cadnova_test/viaparams`: one standard via per via parameter, each given only that parameter. |
 | `round-112` | Vias with other parameters added by CAD-Nova: enclosures, offsets, cut size and spacing in sky130 `sample` and Aureo `breakout_lyichen` (see `EDITS.txt`). Generator version 54. |
 | `round-113` | No CAD-Nova edits. Generator version 55 adds `cadnova_test/rvbase`, `rvdel`, `rvmove` and `rvadd`: routes with vias, then a route on no net that owns a via deleted, a route's segments and via moved, a via added to a route. |
+| `round-195` | Two-index tables with twelve more combinations of settings added by CAD-Nova to sky130's technology. Generator version 91 adds `acute4` and `rends4`: acute joins and round ends at 61 widths, with the EDA environment's polygons. |
 | `round-194` | Round 193 again (its report exceeded the relay's size cap). Generator version 90 retires `cadnova_tdefs3` and `cadnova_tset1` to `3`. |
 | `round-193` | Round 192's tables again, two one-index ones with interpolations 3 and 4. Generator version 89 also looks up the two-index tables (listed as `minStubInfluenceSpacing`). |
 | `round-192` | One- and two-index tables with other table settings added by CAD-Nova to sky130's technology (eight layers each). Generator version 88 looks them up with the EDA environment's table functions below, on, between and above their keys. |
