@@ -160,6 +160,7 @@ Each round is a release; the script always uses the newest one.
 | `round-111` | No CAD-Nova edits. Generator version 54 adds `cadnova_test/viaparams`: one standard via per via parameter, each given only that parameter. |
 | `round-112` | Vias with other parameters added by CAD-Nova: enclosures, offsets, cut size and spacing in sky130 `sample` and Aureo `breakout_lyichen` (see `EDITS.txt`). Generator version 54. |
 | `round-113` | No CAD-Nova edits. Generator version 55 adds `cadnova_test/rvbase`, `rvdel`, `rvmove` and `rvadd`: routes with vias, then a route on no net that owns a via deleted, a route's segments and via moved, a via added to a route. |
+| `round-186` | No CAD-Nova edits. Generator version 84: round 185's Tcl PCell step left out (the EDA environment's session ended with a fatal error there). |
 | `round-185` | No CAD-Nova edits. Generator version 83 adds `cadnova_test/tclpc`: ASAP7's Tcl PCells (`nmos_lvt` with `mag` 1 and 2, `pmos_lvt` with 3.5), whose submasters the script lists. |
 | `round-184` | PCells with new parameter values: five Aureo PCell variants in `dummy` and `HingePullSA` given new values by CAD-Nova, each with the box CAD-Nova's evaluation of the PCell's code gives; the EDA environment evaluates them and lists the submasters. Generator version 82. |
 | `round-183` | No CAD-Nova edits: the PCell masters of three Aureo designs shipped, PCell code included, and each submaster their instances use listed as the EDA environment evaluates it (results format 33). Generator version 82. |
