@@ -7,13 +7,13 @@ script; it checks the latest test kit and sends the report to TIE.
 
 ## Run it
 
-1. Download [`cadnova_check.il`](https://github.com/TIE-Channel/cadnova-pilot/releases/latest/download/cadnova_check.il).
-   It always fetches the latest test kit. Download it again only when TIE
-   announces a new version of the script itself (now version 13).
-2. In your licensed EDA session, run:
-   ```
-   load("cadnova_check.il")
-   ```
+1.	Download [`cadnova_check.il`](https://github.com/TIE-Channel/cadnova-pilot/releases/latest/download/cadnova_check.il).
+	It always fetches the latest test kit. Download it again only when TIE
+	announces a new version of the script itself (now version 13).
+2.	In your licensed EDA session, run:
+	```
+	load("cadnova_check.il")
+	```
 
 That's all. The session shows the progress and a summary at the end. It is
 busy for the few minutes the checks run.
@@ -22,42 +22,42 @@ busy for the few minutes the checks run.
 
 All work happens in a new folder under `~/cadnova_pilot`.
 
-1. Downloads the latest `kit.sha256` and `kit.tgz` from this repository's
-   releases and verifies the checksum.
-2. Starts a separate batch session in that folder, using only the kit's own
-   `cds.lib`. Your session, your libraries and your `cds.lib` are never
-   touched. TIE's relay supplies the command that starts the batch session;
-   the script accepts only letters, digits, spaces and `_ . / + -` in it.
-   The batch session gets no input and at most 10 minutes; if it takes
-   longer, the script stops it (and kills it 30 s later if needed) and
-   reports that.
-3. TIE's generator script (`generate.il`) first creates small test libraries
-   in that folder, from content TIE wrote. Then, for each test cell: opens it
-   read-only and lists its shapes, instances, pins and nets; then opens it for
-   edit, saves it and closes it. TIE compares that list with what CAD-Nova
-   reads from the same files, and reads the files as the batch session saved
-   them.
-4. Streams the sky130 test layouts out with `strmout` (each run also with
-   no input and at most 10 minutes).
-5. Packs `cadnova_report.tgz` and uploads it to TIE, also when a step
-   failed, so TIE can see what went wrong. It goes to a private store and is
-   never published.
-6. Keeps waiting for run requests from TIE while this session is open. Every
-   minute it asks TIE's relay; when TIE requests a run, it downloads the
-   latest script, runs it (steps 1–5) and tells the relay the run is done. The
-   session is busy while a run takes place. To stop waiting, run
-   `CadNovaStop()` in the session, or close it.
+1.	Downloads the latest `kit.sha256` and `kit.tgz` from this repository's
+	releases and verifies the checksum.
+2.	Starts a separate batch session in that folder, using only the kit's own
+	`cds.lib`. Your session, your libraries and your `cds.lib` are never
+	touched. TIE's relay supplies the command that starts the batch session;
+	the script accepts only letters, digits, spaces and `_ . / + -` in it.
+	The batch session gets no input and at most 10 minutes; if it takes
+	longer, the script stops it (and kills it 30 s later if needed) and
+	reports that.
+3.	TIE's generator script (`generate.il`) first creates small test libraries
+	in that folder, from content TIE wrote. Then, for each test cell: opens it
+	read-only and lists its shapes, instances, pins and nets; then opens it for
+	edit, saves it and closes it. TIE compares that list with what CAD-Nova
+	reads from the same files, and reads the files as the batch session saved
+	them.
+4.	Streams the sky130 test layouts out with `strmout` (each run also with
+	no input and at most 10 minutes).
+5.	Packs `cadnova_report.tgz` and uploads it to TIE, also when a step
+	failed, so TIE can see what went wrong. It goes to a private store and is
+	never published.
+6.	Keeps waiting for run requests from TIE while this session is open. Every
+	minute it asks TIE's relay; when TIE requests a run, it downloads the
+	latest script, runs it (steps 1–5) and tells the relay the run is done. The
+	session is busy while a run takes place. To stop waiting, run
+	`CadNovaStop()` in the session, or close it.
 
 **What the report contains:**
-- the check results and the list of what each test cell contains;
-- the streamed GDS of TIE's test cells;
-- TIE's test cells as the batch run saved them, with the names and sizes of
-  the files in their folders, so TIE can check that CAD-Nova reads what the
-  batch session saved;
-- the test libraries the generator script created in the round folder;
-- warning and error lines from the batch and `strmout` logs, with your paths
-  removed;
-- the kit checksum, the EDA version and the date.
+-	the check results and the list of what each test cell contains;
+-	the streamed GDS of TIE's test cells;
+-	TIE's test cells as the batch run saved them, with the names and sizes of
+	the files in their folders, so TIE can check that CAD-Nova reads what the
+	batch session saved;
+-	the test libraries the generator script created in the round folder;
+-	warning and error lines from the batch and `strmout` logs, with your paths
+	removed;
+-	the kit checksum, the EDA version and the date.
 
 To keep the report on your machine instead, run `CadNovaNoUpload = t` in the
 session before loading the script.
@@ -160,6 +160,7 @@ Each round is a release; the script always uses the newest one.
 | `round-111` | No CAD-Nova edits. Generator version 54 adds `cadnova_test/viaparams`: one standard via per via parameter, each given only that parameter. |
 | `round-112` | Vias with other parameters added by CAD-Nova: enclosures, offsets, cut size and spacing in sky130 `sample` and Aureo `breakout_lyichen` (see `EDITS.txt`). Generator version 54. |
 | `round-113` | No CAD-Nova edits. Generator version 55 adds `cadnova_test/rvbase`, `rvdel`, `rvmove` and `rvadd`: routes with vias, then a route on no net that owns a via deleted, a route's segments and via moved, a via added to a route. |
+| `round-208` | Round 207's paths again; in FreePDK3's `and`, paths stored with a deliberately wrong box, to see whether its save recomputes path boxes. Generator version 102 replaces `acute14` with `acute15` (nearly straight, near-right-angle and short overlapping joins). |
 | `round-207` | Round 206's paths again; in FreePDK3's `nor`, whose save recomputes shape boxes, every kind of path whose box the new rules decide. Generator version 101 replaces `acute13` with `acute14` (right turns' corner ties). |
 | `round-206` | Ordinary joins' corners where the rounded offset edges meet (round-ended paths, boxes), joins 89.9 degrees apart and short overlapping legs, written by CAD-Nova; round 205's paths again. Generator version 100 replaces `acute12` with `acute13` (ordinary joins, and on exact ties). |
 | `round-205` | Round-ended paths whose legs overlap and zigzags whose inner corners reach almost the other join, written by CAD-Nova; round 204's paths again. Generator version 99 replaces `acute11` with `acute12` (the acute joins CAD-Nova still refuses). |
@@ -257,6 +258,6 @@ Each round is a release; the script always uses the newest one.
 
 ## Licenses
 
-- Kit contents are public, permissively licensed files. Their licenses are
-  inside each kit, in `LICENSES/`.
-- The scripts are provided by TIE-Games for running the CAD-Nova pilot.
+-	Kit contents are public, permissively licensed files. Their licenses are
+	inside each kit, in `LICENSES/`.
+-	The scripts are provided by TIE-Games for running the CAD-Nova pilot.
