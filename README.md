@@ -160,6 +160,7 @@ Each round is a release; the script always uses the newest one.
 | `round-111` | No CAD-Nova edits. Generator version 54 adds `cadnova_test/viaparams`: one standard via per via parameter, each given only that parameter. |
 | `round-112` | Vias with other parameters added by CAD-Nova: enclosures, offsets, cut size and spacing in sky130 `sample` and Aureo `breakout_lyichen` (see `EDITS.txt`). Generator version 54. |
 | `round-113` | No CAD-Nova edits. Generator version 55 adds `cadnova_test/rvbase`, `rvdel`, `rvmove` and `rvadd`: routes with vias, then a route on no net that owns a via deleted, a route's segments and via moved, a via added to a route. |
+| `round-224` | The PCell round trip rebuilt with CAD-Nova's reviewed converter: the Tcl clones' runtime changes, the expected results do not. |
 | `round-223` | Round 222 again, and the generator (version 112) evaluates 36 short expressions of the script language and lists each value or error, to measure behaviour CAD-Nova's converter had assumed. |
 | `round-222` | The PCell round trip with a completion property each PCell sets last, and, after every other variant, a PCell of TIE's own that raises an error on purpose after one rectangle and one property, to see what the environment keeps of a failed evaluation. |
 | `round-221` | The PCell round trip with a PCell of TIE's own that makes round 219's probe polygons and paths, at two scales, and IHP's PyCells converted again (boolean parameters now reach the code as true or false). |
