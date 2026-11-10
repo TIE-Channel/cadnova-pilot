@@ -160,6 +160,7 @@ Each round is a release; the script always uses the newest one.
 | `round-111` | No CAD-Nova edits. Generator version 54 adds `cadnova_test/viaparams`: one standard via per via parameter, each given only that parameter. |
 | `round-112` | Vias with other parameters added by CAD-Nova: enclosures, offsets, cut size and spacing in sky130 `sample` and Aureo `breakout_lyichen` (see `EDITS.txt`). Generator version 54. |
 | `round-113` | No CAD-Nova edits. Generator version 55 adds `cadnova_test/rvbase`, `rvdel`, `rvmove` and `rvadd`: routes with vias, then a route on no net that owns a via deleted, a route's segments and via moved, a via added to a route. |
+| `round-231` | Round 230 again; the generator (version 116) evaluates 25 short expressions about negative zero, comparisons, float-to-integer limits, quoted lists and print forms. |
 | `round-230` | Round 229 again; the generator (version 115) evaluates 41 short expressions about integer overflow, values past 32 bits, comparisons with a not-a-number value and print forms. |
 | `round-229` | The PCell round trip rebuilt with CAD-Nova's converter after its second review, and the generator (version 114) evaluates 53 short expressions about formatting, number conversion, special values and printing. |
 | `round-228` | The PCell round trip with the PyCell package regenerated after a review (names no corpus code uses removed); the expected results do not change. |
