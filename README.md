@@ -160,6 +160,7 @@ Each round is a release; the script always uses the newest one.
 | `round-111` | No CAD-Nova edits. Generator version 54 adds `cadnova_test/viaparams`: one standard via per via parameter, each given only that parameter. |
 | `round-112` | Vias with other parameters added by CAD-Nova: enclosures, offsets, cut size and spacing in sky130 `sample` and Aureo `breakout_lyichen` (see `EDITS.txt`). Generator version 54. |
 | `round-113` | No CAD-Nova edits. Generator version 55 adds `cadnova_test/rvbase`, `rvdel`, `rvmove` and `rvadd`: routes with vias, then a route on no net that owns a via deleted, a route's segments and via moved, a via added to a route. |
+| `round-238` | The Tcl script's next part: the placed variants' text styles, properties and net details listed too, following round 237; the PCell round trip runs again. |
 | `round-237` | The Tcl script's next part: the placed variants' contents counted and listed, following what round 236's bindings answered; the PCell round trip runs again. |
 | `round-236` | The Tcl script's next part: the masters placed in a scratch design of writable copies and their variants listed, following what round 235's bindings answered; the PCell round trip runs again. |
 | `round-235` | The Tcl script's second part over the read-only copies (and, for evaluation, writable copies of the copies inside the kit), following what round 234's bindings answered; the PCell round trip runs again. |
