@@ -37,6 +37,11 @@ All work happens in a new folder under `~/cadnova_pilot`.
 	edit, saves it and closes it. TIE compares that list with what CAD-Nova
 	reads from the same files, and reads the files as the batch session saved
 	them.
+	Since round 264 the generator also asks the batch session, last of all, to
+	write netlists of the kit's test benches with your EDA environment's own
+	script netlister (no form is opened), and to check and save the copies it
+	netlists; everything is written inside the round folder, and a search
+	confined to that folder collects the netlists.
 4.	Streams the sky130 test layouts out with `strmout` (each run also with
 	no input and at most 10 minutes).
 5.	Packs `cadnova_report.tgz` and uploads it to TIE, also when a step
@@ -55,6 +60,8 @@ All work happens in a new folder under `~/cadnova_pilot`.
 	the files in their folders, so TIE can check that CAD-Nova reads what the
 	batch session saved;
 -	the test libraries the generator script created in the round folder;
+-	the netlists and netlister logs the batch session wrote for the kit's test
+	benches (since round 264);
 -	warning and error lines from the batch and `strmout` logs, with your paths
 	removed;
 -	the kit checksum, the EDA version and the date.
@@ -186,6 +193,7 @@ Each round is a release; the script always uses the newest one.
 | `round-262` | Round 261 again, plus, after every other check, the started simulation session reached through its window: what it holds, how an environment and a design are given to it, and the netlist writers called with it, the files they write in the round's own folder or a folder the calls name returned. |
 | `round-263` | Round 262 again, plus a library-level description written by CAD-Nova (CAD-Nova's generic library 2.7 carrying the owner's library settings), and the effective descriptions of its devices and pins listed for comparison with the owner's. |
 | `round-264` | Round 263 again, plus, after every other check, netlists of the kit's four testbenches written by the EDA environment itself, with the script calls the partner uses: two simulation formats and the LVS export, each file written into the round's own folder and returned; CAD-Nova's netlists of the same testbenches are then compared with them line by line. |
+| `round-265` | Round 264 again, plus netlisting with its controls, after every other check: the owner's nine testbenches unedited; an older public schematic nobody edited; the EDA environment's own edits of one testbench (an instance placed, a value set, two nets joined by a wire, a label moved), each beside the same edit made by CAD-Nova; CAD-Nova's copies as they are, stamped as a save stamps them, and after a check and save from the script. Every case's stamps and counters are listed, then its netlists are written in two simulation formats; the names of the functions that could export the LVS netlist are listed, none is called. Generator version 143. |
 | `round-238` | The Tcl script's next part: the placed variants' text styles, properties and net details listed too, following round 237; the PCell round trip runs again. |
 | `round-237` | The Tcl script's next part: the placed variants' contents counted and listed, following what round 236's bindings answered; the PCell round trip runs again. |
 | `round-236` | The Tcl script's next part: the masters placed in a scratch design of writable copies and their variants listed, following what round 235's bindings answered; the PCell round trip runs again. |
